@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React from "react";
 import {
@@ -13,24 +14,24 @@ import { cn } from "@/lib/utils";
 export function Button({
   borderRadius = "1.75rem",
   children,
-  as: Component = "button",
   containerClassName,
   borderClassName,
   duration,
   className,
   ...otherProps
 }: {
+  Component: unknown;
   borderRadius?: string;
   children: React.ReactNode;
-  as?: any;
+  as?: unknown;
   containerClassName?: string;
   borderClassName?: string;
   duration?: number;
   className?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }) {
   return (
-    <Component
+    <div
       className={cn(
         "relative w-[80%] overflow-hidden bg-transparent p-[1px] text-xl",
         containerClassName,
@@ -65,7 +66,7 @@ export function Button({
       >
         {children}
       </div>
-    </Component>
+    </div>
   );
 }
 
@@ -80,9 +81,9 @@ export const MovingBorder = ({
   duration?: number;
   rx?: string;
   ry?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }) => {
-  const pathRef = useRef<any>();
+  const pathRef = useRef<any>(null);
   const progress = useMotionValue<number>(0);
 
   useAnimationFrame((time) => {

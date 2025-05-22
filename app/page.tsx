@@ -11,10 +11,10 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="relative bg-black overflow-hidden">
+    <main className="relative black overflow-hidden">
       <div>
         <FloatingNavbar navItems={navItems}/>
-        <Hero />
+        <Hero/>
         <Grid />
         <RecentProjects />
         <Clients />
