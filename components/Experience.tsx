@@ -17,6 +17,7 @@ const Experience = () => {
             key={card.id}
             borderRadius='1.75rem'
             duration={Math.floor(Math.random() * 10000) + 50000}
+            Component={undefined}
           >
             <div className='flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-3 lg:py-10 gap-2'>
               <img src={card.thumbnail} alt={card.thumbnail} className="lg:w-32 md:w-20 w-16"/>
