@@ -1,3 +1,4 @@
+"use client";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import FloatingNavbar from "@/components/ui/FloatingNavbar";
@@ -14,7 +15,7 @@ export default function Home() {
     <main className="relative black overflow-hidden">
       <div>
         <FloatingNavbar navItems={navItems}/>
-        <Hero/>
+        <Hero />
         <Grid />
         <RecentProjects />
         <Clients />
