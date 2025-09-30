@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main className="relative black overflow-hidden">
       <div>
-        <FloatingNavbar navItems={navItems}/>
+        <FloatingNavbar navItems={navItems} />
         <Hero />
         <Grid />
         <RecentProjects />
